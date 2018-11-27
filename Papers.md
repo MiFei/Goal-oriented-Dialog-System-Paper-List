@@ -73,15 +73,15 @@ ASRU2015
 **[3]** Zhuoran Wang, Yannis Stylianou, Tsung-Hsien Wen, Pei-Hao Su, Steve Young
 **Learning Domain-Independent Dialogue Policies via Ontology Parameterisation**
 SigDial 2015
-1. 人工基于不同domain的ontology定义了**很多很多** domain-invariant feature喂到policy的state表示里，文中叫Domain Independent Parametrisation (DIP)
-2. 这篇是基于POMDP，还没有用deep RL， 后面**[6,10]** 加入DRL
+1. 人工基于不同domain的ontology定义了 **很多很多** domain-invariant feature喂到policy的state表示里，文中叫Domain Independent Parametrisation (DIP)
+2. 这篇是基于POMDP，还没有用deep RL， 后面 **[6,10]** 加入DRL
 
 **[4]** Heriberto Cuayáhuitl, Seunghak Yu, Ashley Williamson, Jacob Carse
 **Deep Reinforcement Learning for Multi-Domain Dialogue Systems**
 NIPS 2016 RL workshop
 1. model domain transition by a deterministic F, F is trained with MLP+SVM.
 2. EMNLP2017’的HRL和这个思路相似，不过domain transition是通过top-level policy学得
-3. 本文后面发在IJCNN2017**[5]**
+3. 本文后面发在IJCNN2017 **[5]**
 
 **[5]** Heriberto Cuayáhuitl, Seunghak Yu Ashley Williamson, Jacob Carse
 **Scaling Up Deep Reinforcement Learning for Multi-Domain Dialogue Systems**
@@ -90,7 +90,7 @@ IJCNN 2017
 **[6]** Alexandros Papangelis and Yannis Stylianou
 **Single-Model Multi-domain Dialogue Management with Deep Learning**
 IWSDS 2017
-1. propose DIP**[3]** + DQN
+1. propose DIP **[3]** + DQN
 2. 直接吧Deep Q Learning中的state换成了DIP表示，所以可以domain independent
 
 **[7]** Alexandros Papangelis, Stefan Ultes and Yannis Stylianou
@@ -113,7 +113,7 @@ Inigo Casanueva, Paweł Budzianowski,Pei-Hao Su, Stefan Ultes, Lina Rojas-Baraho
 NAACL 2018
 1. 本文基于DIP **[3]** 的domain-independent特征表示，提出Feudal RL。 其本质也是一种HRL，不过微软的HRL **[8]** 是基于定义好的temporal subtasks，本文只考虑是否和slot相关，不定义tasks. 先根据state选act_type, if it's slot-independent -> 跳Q^i else 跳Q^s 选<s,v>。所以微软的HRL是temporal，本文是spatial ！！！
 2. information sharing mechanism between slots：Q^s policy的参数对不同的slot共享
-3. 实验中的比了**[6]** ， 证明FDQN比普通DNQ好，没比**[8]**
+3. 实验中的比了 **[6]** ， 证明FDQN比普通DNQ好，没比 **[8]**
 
 
 ## 2 Other Papers
