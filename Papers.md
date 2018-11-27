@@ -97,6 +97,8 @@ IWSDS 2017
 **Domain Complexity and Policy Learning in Task-Oriented Dialogue Systems**
 IWSDS 2017
 
+1. 比较最普通的GPRL和DQN在不同的domain的效率
+
 **[8]** Baolin Peng, Xiujun Li, Lihong Li, Jianfeng Gao, Asli Celikyilmaz, Sungjin Lee, and Kam-Fai Wong. 
 **Composite task-completion dialogue policy learning via hierarchical deep reinforcement learning.**
 EMNLP 2017
