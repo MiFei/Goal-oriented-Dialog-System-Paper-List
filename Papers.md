@@ -66,7 +66,7 @@ EMNLP 2018 **[D3Q]**
 **POMDP-based dialogue manager adaptation to extended domains**
 SigDial 2013 Best Paper 
 
-**[2]* Milica Gasic, Nikola Mrksic, Pei-hao Su, David Vandyke, Tsung-Hsien Wen, and Steve Young
+**[2]** Milica Gasic, Nikola Mrksic, Pei-hao Su, David Vandyke, Tsung-Hsien Wen, and Steve Young
 **Policy committee for adaptation in multi-domain spoken dialogue systems**
 ASRU2015
 
@@ -74,7 +74,7 @@ ASRU2015
 **Learning Domain-Independent Dialogue Policies via Ontology Parameterisation**
 SigDial 2015
 1. 人工基于不同domain的ontology定义了 **很多很多** domain-invariant feature喂到policy的state表示里，文中叫Domain Independent Parametrisation (DIP)
-2. 这篇是基于POMDP，还没有用deep RL， 后面 **[6,10]** 加入DRL，这类方法像是transfer learning
+2. 这篇是基于 **[1]** 的高斯过程POMDP， 后面 **[6,10]** 加入DeepRL，这类方法像是transfer learning
 
 **[4]** Heriberto Cuayáhuitl, Seunghak Yu, Ashley Williamson, Jacob Carse
 **Deep Reinforcement Learning for Multi-Domain Dialogue Systems**
