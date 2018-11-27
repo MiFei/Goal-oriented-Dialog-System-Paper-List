@@ -70,29 +70,38 @@ SigDial 2013 Best Paper  **[GPRL]**
 **Learning Domain-Independent Dialogue Policies via Ontology Parameterisation**
 SigDial 2015
 
-**[3]**Heriberto Cuayáhuitl, Seunghak Yu, Ashley Williamson, Jacob Carse
+**[3]* Milica Gasic, Nikola Mrksic, Pei-hao Su, David Vandyke, Tsung-Hsien Wen, and Steve Young
+**Policy committee for adaptation in multi-domain spoken dialogue systems**
+ASRU2015
+
+**[4]**Heriberto Cuayáhuitl, Seunghak Yu, Ashley Williamson, Jacob Carse
 **Deep Reinforcement Learning for Multi-Domain Dialogue Systems**
 NIPS 2016 RL workshop
 
-**[4]** Baolin Peng, Xiujun Li, Lihong Li, Jianfeng Gao, Asli Celikyilmaz, Sungjin Lee, and Kam-Fai Wong. 
+**[5]** Baolin Peng, Xiujun Li, Lihong Li, Jianfeng Gao, Asli Celikyilmaz, Sungjin Lee, and Kam-Fai Wong. 
 **Composite task-completion dialogue policy learning via hierarchical deep reinforcement learning.**
 EMNLP 2017
 
-**[5]**Heriberto Cuayáhuitl, Seunghak Yu Ashley Williamson, Jacob Carse
+**[6]**Heriberto Cuayáhuitl, Seunghak Yu Ashley Williamson, Jacob Carse
 **Scaling Up Deep Reinforcement Learning for Multi-Domain Dialogue Systems**
 IJCNN 2017
 
-**[6]**Pawel Budzianowski, Stefan Ultes, Pei-Hao Su, Nikola Mrksic, Tsung-Hsien Wen, Inigo Casanueva, Lina Rojas-Barahona, and Milica Gasic.
+**[7]**Pawel Budzianowski, Stefan Ultes, Pei-Hao Su, Nikola Mrksic, Tsung-Hsien Wen, Inigo Casanueva, Lina Rojas-Barahona, and Milica Gasic.
 **Sub-domain modelling for dialogue management with hierarchical reinforcement learning.** 
 arXiv 2017
 
-**[7]**Alexandros Papangelis and Yannis Stylianou
+**[8]**Alexandros Papangelis and Yannis Stylianou
 **Single-Model Multi-domain Dialogue Management with Deep Learning**
 IWSDS 2017
 
-**[8]**Alexandros Papangelis, Stefan Ultes and Yannis Stylianou
+**[9]**Alexandros Papangelis, Stefan Ultes and Yannis Stylianou
 **Domain Complexity and Policy Learning in Task-Oriented Dialogue Systems**
 IWSDS 2017
+
+**[10]** 
+Inigo Casanueva, Paweł Budzianowski,Pei-Hao Su, Stefan Ultes, Lina Rojas-Barahona, Bo-Hsiang Tseng, and Milica Gasic
+**Feudal Reinforcement Learning for Dialogue Management in Large Domains**
+NAACL 2018
 
 
 ## 2 Other Papers
