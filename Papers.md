@@ -100,12 +100,14 @@ IWSDS 2017
 **[8]** Baolin Peng, Xiujun Li, Lihong Li, Jianfeng Gao, Asli Celikyilmaz, Sungjin Lee, and Kam-Fai Wong. 
 **Composite task-completion dialogue policy learning via hierarchical deep reinforcement learning.**
 EMNLP 2017
-1. 提出了temporal HRL to model temporal transition between subtasks. 定义了每个subtask的intrinsic reward，表示该子任务的完成度
+1. 提出了temporal HRL to model temporal transition between subtasks. 优化DQN 定义了每个subtask的intrinsic reward，表示该子任务的完成度
 2. 提到了slot constraints among subtasks的概念，并且通过在user simulation中加入constraints，让HRL去学。user simulation是FRAMES+Constraints
 
 **[9]** Pawel Budzianowski, Stefan Ultes, Pei-Hao Su, Nikola Mrksic, Tsung-Hsien Wen, Inigo Casanueva, Lina Rojas-Barahona, and Milica Gasic.
 **Sub-domain modelling for dialogue management with hierarchical reinforcement learning.** 
 arXiv 2017
+
+1. 和 **[8]** 类似，也是model HRL，但是Q function是用的 **[1]** 中的Gaussian Process去估计的。
 
 **[10]** 
 Inigo Casanueva, Paweł Budzianowski,Pei-Hao Su, Stefan Ultes, Lina Rojas-Barahona, Bo-Hsiang Tseng, and Milica Gasic
