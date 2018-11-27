@@ -66,42 +66,54 @@ EMNLP 2018 **[D3Q]**
 **POMDP-based dialogue manager adaptation to extended domains**
 SigDial 2013 Best Paper  **[GPRL]**
 
-**[2]** Zhuoran Wang, Yannis Stylianou, Tsung-Hsien Wen, Pei-Hao Su, Steve Young
-**Learning Domain-Independent Dialogue Policies via Ontology Parameterisation**
-SigDial 2015
-
-**[3]* Milica Gasic, Nikola Mrksic, Pei-hao Su, David Vandyke, Tsung-Hsien Wen, and Steve Young
+**[2]* Milica Gasic, Nikola Mrksic, Pei-hao Su, David Vandyke, Tsung-Hsien Wen, and Steve Young
 **Policy committee for adaptation in multi-domain spoken dialogue systems**
 ASRU2015
 
-**[4]**Heriberto Cuayáhuitl, Seunghak Yu, Ashley Williamson, Jacob Carse
+**[3]** Zhuoran Wang, Yannis Stylianou, Tsung-Hsien Wen, Pei-Hao Su, Steve Young
+**Learning Domain-Independent Dialogue Policies via Ontology Parameterisation**
+SigDial 2015
+1. 人工基于不同domain的ontology定义了**很多很多** domain-invariant feature喂到policy的state表示里，文中叫Domain Independent Parametrisation (DIP)
+2. 这篇是基于POMDP，还没有用deep RL， 后面**[6,10]** 加入DRL
+
+**[4]** Heriberto Cuayáhuitl, Seunghak Yu, Ashley Williamson, Jacob Carse
 **Deep Reinforcement Learning for Multi-Domain Dialogue Systems**
 NIPS 2016 RL workshop
+1. model domain transition by a deterministic F, F is trained with MLP+SVM.
+2. EMNLP2017’的HRL和这个思路相似，不过domain transition是通过top-level policy学得
+3. 本文后面发在IJCNN2017**[5]**
 
-**[5]** Baolin Peng, Xiujun Li, Lihong Li, Jianfeng Gao, Asli Celikyilmaz, Sungjin Lee, and Kam-Fai Wong. 
-**Composite task-completion dialogue policy learning via hierarchical deep reinforcement learning.**
-EMNLP 2017
-
-**[6]**Heriberto Cuayáhuitl, Seunghak Yu Ashley Williamson, Jacob Carse
+**[5]** Heriberto Cuayáhuitl, Seunghak Yu Ashley Williamson, Jacob Carse
 **Scaling Up Deep Reinforcement Learning for Multi-Domain Dialogue Systems**
 IJCNN 2017
 
-**[7]**Pawel Budzianowski, Stefan Ultes, Pei-Hao Su, Nikola Mrksic, Tsung-Hsien Wen, Inigo Casanueva, Lina Rojas-Barahona, and Milica Gasic.
-**Sub-domain modelling for dialogue management with hierarchical reinforcement learning.** 
-arXiv 2017
-
-**[8]**Alexandros Papangelis and Yannis Stylianou
+**[6]** Alexandros Papangelis and Yannis Stylianou
 **Single-Model Multi-domain Dialogue Management with Deep Learning**
 IWSDS 2017
+1. propose DIP**[3]** + DQN
+2. 直接吧Deep Q Learning中的state换成了DIP表示，所以可以domain independent
 
-**[9]**Alexandros Papangelis, Stefan Ultes and Yannis Stylianou
+**[7]** Alexandros Papangelis, Stefan Ultes and Yannis Stylianou
 **Domain Complexity and Policy Learning in Task-Oriented Dialogue Systems**
 IWSDS 2017
+
+**[8]** Baolin Peng, Xiujun Li, Lihong Li, Jianfeng Gao, Asli Celikyilmaz, Sungjin Lee, and Kam-Fai Wong. 
+**Composite task-completion dialogue policy learning via hierarchical deep reinforcement learning.**
+EMNLP 2017
+1. 提出了temporal HRL to model temporal transition between subtasks. 定义了每个subtask的intrinsic reward，表示该子任务的完成度
+2. 提到了slot constraints among subtasks的概念，并且通过在user simulation中加入constraints，让HRL去学。user simulation是FRAMES+Constraints
+
+**[9]** Pawel Budzianowski, Stefan Ultes, Pei-Hao Su, Nikola Mrksic, Tsung-Hsien Wen, Inigo Casanueva, Lina Rojas-Barahona, and Milica Gasic.
+**Sub-domain modelling for dialogue management with hierarchical reinforcement learning.** 
+arXiv 2017
 
 **[10]** 
 Inigo Casanueva, Paweł Budzianowski,Pei-Hao Su, Stefan Ultes, Lina Rojas-Barahona, Bo-Hsiang Tseng, and Milica Gasic
 **Feudal Reinforcement Learning for Dialogue Management in Large Domains**
 NAACL 2018
+1. 本文基于DIP **[3]** 的domain-independent特征表示，提出Feudal RL。 其本质也是一种HRL，不过微软的HRL **[8]** 是基于定义好的temporal subtasks，本文只考虑是否和slot相关，不定义tasks. 先根据state选act_type, if it's slot-independent -> 跳Q^i else 跳Q^s 选<s,v>。所以微软的HRL是temporal，本文是spatial ！！！
+2. information sharing mechanism between slots：Q^s policy的参数对不同的slot共享
+3. 实验中的比了**[6]** ， 证明FDQN比普通DNQ好，没比**[8]**
 
 
 ## 2 Other Papers
