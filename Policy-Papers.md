@@ -148,7 +148,7 @@ Inigo Casanueva, Paweł Budzianowski,Pei-Hao Su, Stefan Ultes, Lina Rojas-Baraho
 **Feudal Reinforcement Learning for Dialogue Management in Large Domains**
 NAACL 2018
 1. 本文基于DIP **[3]** 的domain-independent特征表示，提出Feudal RL。 其本质也是一种HRL，不过微软的HRL **[8]** 是基于定义好的temporal subtasks，本文只考虑是否和slot相关，不定义tasks. 先根据state选act_type, if it's slot-independent -> 跳Q^i else 跳Q^s 选<s,v>。所以微软的HRL是temporal，本文是spatial ！！！
-2. information sharing mechanism between slots：Q^s policy的参数对不同的slot共享
+2. By defining a set of slot dependent policies with shared parameters, the model is able to learn a general way to act in slots, increasing its scalability to large domains.
 3. 实验中的比了 **[6]** ， 证明FDQN比普通DNQ好，没比 **[8]**
 
 
