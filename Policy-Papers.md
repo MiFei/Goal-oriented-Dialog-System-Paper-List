@@ -151,6 +151,12 @@ NAACL 2018
 2. By defining a set of slot dependent policies with shared parameters, the model is able to learn a general way to act in slots, increasing its scalability to large domains.
 3. 实验中的比了 **[6]** ， 证明FDQN比普通DNQ好，没比 **[8]**
 
+**[11]** Da Tang, Xiujun Li, Jianfeng Gao, Chong Wang, Lihong Li, Tony Jebara
+**Subgoal Discovery for Hierarchical Dialogue Policy Learning**
+EMNLP2018
+1. 提出了一个无监督的subgoal discovery net (SDN)
+2. 在把SDN接在了之前的HRL前面
+
 
 ## 3 Other Papers
 
