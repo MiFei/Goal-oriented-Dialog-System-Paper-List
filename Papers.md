@@ -29,8 +29,10 @@ arXiv 2016
 SigDial 2017
 
 **[6]** Pei-Hao Su, Milica Gasic, Nikola Mrksic, Lina Rojas-Barahona, Stefan Ultes, David Vandyke, Tsung-Hsien Wen, and Steve Young. 
-**On-line active reward learning for policy optimisation in spoken di- alogue systems.**
+**On-line active reward learning for policy optimisation in spoken dialogue systems.**
 ACL 2016
+1. The dialogue success is modeled using Gaussian Process
+2. If the reward model is uncertain, user feedback is required; otherwise the predicted success rate is utilized.
 
 **[7]** Bing Liu, Ian Lane
 **Iterative Policy Learning in End-to-End Trainable Task-Oriented Neural Dialog Models**
@@ -51,14 +53,46 @@ NAACL 2018
 **[11]** Zachary Lipton, Xiujun Li, Jianfeng Gao, Lihong Li, Faisal Ahmed, Li Deng
 **BBQ-Networks: Efficient Exploration in Deep Reinforcement Learning for Task-Oriented Dialogue Systems**
 AAAI 2018
+1. BBQ maintains an distribution q over the parameters to estimate their uncertainty. 
+2. Use Thompson Sampling to select actions based on the probability distribution.
 
 **[12]** Baolin Peng Xiujun Li Jianfeng Gao Jingjing Liu Kam-Fai Wong Shang-Yu Su
 **Deep Dyna-Q: Integrating Planning for Task-Completion Dialogue Policy Learning**
 ACL 2018 **[DDQ]**
+1. Train the policy and simulator jointly
+2. The “world model” is actually a simulator
+
 
 **[13]** Shang-Yu Su Xiujun Li Jianfeng Gao Jingjing Liu Yun-Nung Chen
 **D3Q: Robust Planning for Dialogue Policy Learning**
 EMNLP 2018 **[D3Q]**
+1. Applying a discriminator to identify whether an experience is from simulator or real user
+2. In the simulation stage, repeat simulation until 𝐾 high quality experiences are collected
+
+
+**[14]** Yuexin Wu, Xiujun Li, Jingjing Liu, Jianfeng Gao, Yiming Yang
+**Switch-based Active Deep Dyna-Q: Efficient Adaptive Planning for Task-Completion Dialogue Policy Learning**
+AAAI 2019 **[Switch-DDQ]**
+1. Train a score function 𝑆𝑐𝑜𝑟𝑒() to measure the quality of simulated experience (Similar to the discriminator in D3Q)
+
+2. Select the user goal based on validation accuracy (Goals with lower success rate are of higher priority)
+
+
+**[15]** Kaixiang Mo, Shuangyin Li, Yu Zhang, Jiajun Li, Qiang Yang
+**Personalizing a Dialogue System with Transfer Reinforcement Learning**
+AAAI 2018
+1. The dialogue policy of a user can be decomposed to a general and a user-specific policy.
+2. Learning general policy from source data (large), and user-specific policy with target data (small).
+
+**[16]** Vladimir Ilievski, Claudiu Musat, Andreea Hossmann, Michael Baeriswyl
+**Goal-Oriented Chatbot Dialog Management Bootstrapping with Transfer Learning**
+IJCAI 2018 **[done by my colleague]**
+1. Similar domains share some common slots.
+2. After training in target domain, the parameters of common slots can be copied to source model.
+3. Experiment done on two domains (Restaurant and Movie)
+
+
+
 
 ### 2 Multi-domain/Composite-task Dialogues
 
@@ -69,6 +103,9 @@ SigDial 2013 Best Paper
 **[2]** Milica Gasic, Nikola Mrksic, Pei-hao Su, David Vandyke, Tsung-Hsien Wen, and Steve Young
 **Policy committee for adaptation in multi-domain spoken dialogue systems**
 ASRU2015
+1. Some policies are firstly trained on different datasets.
+2. All policies recommend an action, which are then aggregated into a final action by the BCM policy.
+
 
 **[3]** Zhuoran Wang, Yannis Stylianou, Tsung-Hsien Wen, Pei-Hao Su, Steve Young
 **Learning Domain-Independent Dialogue Policies via Ontology Parameterisation**
