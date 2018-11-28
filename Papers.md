@@ -1,12 +1,7 @@
-# Goal-oriented-Dialog-System --- Datasets/ Dialog State Tracking/ Policy/ Response Generation
 
-## 1 Datasets
+# 3 RL Policy & Dialog Management
 
-## 2 Dialog State Tracking
-
-## 3 Policy & Dialog Management
-
-### 1 Deep Reinforcement Learning
+## 1 Deep Reinforcement Learning
 
 **[1]** Milica Gasic, C. Breslin, M. Henderson, D. Kim, M. Szummer, B. Thomson, P. Tsiakoulis and Steve Young 
 **POMDP-based dialogue manager adaptation to extended domains**
@@ -94,7 +89,7 @@ IJCAI 2018 **[done by my colleague]**
 
 
 
-### 2 Multi-domain/Composite-task Dialogues
+## 2 Multi-domain/Composite-task Dialogues
 
 **[1]** Milica Gasic, C. Breslin, M. Henderson, D. Kim, M. Szummer, B. Thomson, P. Tsiakoulis and Steve Young 
 **POMDP-based dialogue manager adaptation to extended domains**
