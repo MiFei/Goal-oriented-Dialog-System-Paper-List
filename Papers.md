@@ -1,5 +1,5 @@
 
-# 3 RL Policy & Dialog Management
+# RL Policy & Dialog Management
 
 ## 1 Deep Reinforcement Learning
 
@@ -152,7 +152,7 @@ NAACL 2018
 3. 实验中的比了 **[6]** ， 证明FDQN比普通DNQ好，没比 **[8]**
 
 
-## 2 Other Papers
+## 3 Other Papers
 
 
 
